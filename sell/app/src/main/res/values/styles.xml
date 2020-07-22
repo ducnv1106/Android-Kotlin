@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#318BF5</item>
+        <item name="colorPrimaryDark">#1A7AEB</item>
+        <item name="colorAccent">#1867D6</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColorPrimary">@color/clr_white</item>
+        <item name="drawerArrowStyle">@style/MaterialDrawer.DrawerArrowStyle</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">#78A1FF</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:textAppearance">@style/TextAppearance.Text.Regular</item>
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="android:buttonStyle">@style/RobotoButtonStyle</item>
+    </style>
+
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+    <style name="TextAppearance.Text.Regular" parent="android:TextAppearance">
+        <item name="fontPath">fonts/segui/seguisb_regular.ttf</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+    <style name="RobotoButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+    <style name="MaterialDrawer.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">false</item>
+        <item name="color">@color/clr_white</item>
+    </style>
+
+</resources>

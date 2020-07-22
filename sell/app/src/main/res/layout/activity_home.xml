@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="listener"
+            type="com.ducnv1106.sell.ui.HomeNavigator" />
+    </data>
+    <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:background="@color/clr_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:onClick="@{v->listener.onMenuClicked()}"
+                    android:id="@+id/image_menu"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:src="@drawable/ic_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/clr_tv_black"
+                    android:drawableStart="@drawable/ic_search"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:hint="Search"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/image_menu"
+                    android:id="@+id/edt_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_21sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_toStartOf="@id/layout_order"
+                    android:background="@drawable/bg_edt_search"
+                    android:singleLine="true" />
+
+                <RelativeLayout
+                    android:onClick="@{v->listener.onOrderClicked()}"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:id="@+id/layout_order"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_cart" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@drawable/bg_amount_order"
+                        android:gravity="center"
+                        android:textColor="@color/clr_white"
+                        tools:text="1" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <ViewFlipper
+                android:id="@+id/viewFlipper"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/image_car" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/image_car2" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/image_moto" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/image_motobike2" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/image_iphone" />
+            </ViewFlipper>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextAppearance.Text.Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/str_new_product"
+                android:textColor="@color/clr_tv_black"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp" />
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="@dimen/_2sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:alpha="0.3"
+                    android:background="@drawable/bg_view" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_menu_navi"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:background="@drawable/image_car" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/image_menu_navi"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_toStartOf="@id/view"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            </RelativeLayout>
+        </com.google.android.material.navigation.NavigationView>
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.ducnv1106.sell.model.Product" />
+
+        <variable
+            name="listener"
+            type="com.ducnv1106.sell.adapter.BaseAdapter.BaseListener" />
+
+        <variable
+            name="position"
+            type="Integer" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:elevation="@dimen/_5sdp"
+        android:onClick="@{v->listener.onItemClicked(position)}"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:loadImage="@{item.imageProduct}" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@id/image">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_name"
+                    style="@style/TextAppearance.Text.Regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{`Name: `+item.nameProduct}"
+                    android:textColor="@color/clr_tv_black"
+                    android:textSize="@dimen/_13sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_name"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@{`Description: `+item.description}"
+                    android:textColor="@color/clr_tv_black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_description"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:text="@{`Price: `+item.priceProduct}"
+                    android:textColor="@color/clr_tv_black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:onClick="@{v->listener.onOrderClicked(position)}"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/tv_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_description"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:text="ORDER"
+                    android:textColor="#FF0000"
+                    android:textSize="@dimen/_10sdp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

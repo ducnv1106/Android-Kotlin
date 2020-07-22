@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">sell</string>
+    <string name="str_new_product">Sản phẩm mới nhất</string>
+    <string name="str_title_toolbar_home">Home</string>
+    <string name="str_title_toolbar_order_product">OrderProduct</string>
+    <string name="str_title_toolbar_order_detail">Đơn hàng</string>
+</resources>

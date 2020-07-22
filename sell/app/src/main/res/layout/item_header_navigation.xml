@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="item"
+            type="com.ducnv1106.sell.model.ProductType" />
+        <variable
+            name="listener"
+            type="com.ducnv1106.sell.adapter.NaviAdapter.NaviAdaperListener" />
+        <variable
+            name="position"
+            type="Integer" />
+    </data>
+<LinearLayout
+    android:onClick="@{v->listener.onItemClicked(position)}"
+    android:layout_marginStart="@dimen/_18sdp"
+    android:layout_marginBottom="@dimen/_15sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:text="@{item.name}"
+        style="@style/TextAppearance.Text.Regular"
+        tools:text="Dien thoai"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/clr_balck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+</layout>

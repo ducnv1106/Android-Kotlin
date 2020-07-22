@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/clr_hint"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbarOverall"
+      style="@style/Toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:navigationIcon="@drawable/ic_back">
+
+    <TextView
+        style="@style/TextNormal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="@string/general"
+        android:textColor="@android:color/black" />
+  </androidx.appcompat.widget.Toolbar>
+
+  <TextView
+      style="@style/TextNormal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/_32dp"
+      android:gravity="center"
+      android:text="@string/you_choose"
+      android:textSize="@dimen/_18sp"
+      android:textStyle="bold" />
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnNextWelcome"
+        android:layout_marginStart="@dimen/_32dp"
+        android:layout_marginTop="@dimen/_32dp"
+        android:layout_marginEnd="@dimen/_32dp">
+
+      <TableRow>
+
+        <TextView
+            style="@style/TextNormal"
+            android:text="@string/ten_dang_nhap" />
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/TextNormal"
+            android:layout_marginStart="@dimen/_8dp"
+            android:textColor="@android:color/black"
+            tools:text="Nguyen Van A" />
+      </TableRow>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:layout_marginTop="@dimen/_8dp"
+          android:layout_marginBottom="@dimen/_8dp"
+          android:background="@android:color/darker_gray" />
+
+      <TableRow>
+
+        <TextView
+            style="@style/TextNormal"
+            android:text="@string/email" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            style="@style/TextNormal"
+            android:layout_marginStart="@dimen/_8dp"
+            android:textColor="@android:color/black"
+            tools:text="Cuongnv219@gmail.com" />
+      </TableRow>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:layout_marginTop="@dimen/_8dp"
+          android:layout_marginBottom="@dimen/_8dp"
+          android:background="@android:color/darker_gray" />
+
+      <TableRow>
+
+        <TextView
+            style="@style/TextNormal"
+            android:text="@string/sex" />
+
+        <TextView
+            android:id="@+id/tvSex"
+            style="@style/TextNormal"
+            android:layout_marginStart="@dimen/_8dp"
+            android:textColor="@android:color/black"
+            tools:text="Male" />
+      </TableRow>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:layout_marginTop="@dimen/_8dp"
+          android:layout_marginBottom="@dimen/_8dp"
+          android:background="@android:color/darker_gray" />
+
+      <TableRow>
+
+        <TextView
+            style="@style/TextNormal"
+            android:text="@string/age" />
+
+        <TextView
+            android:id="@+id/tvAge"
+            style="@style/TextNormal"
+            android:layout_marginStart="@dimen/_8dp"
+            android:textColor="@android:color/black"
+            tools:text="18" />
+      </TableRow>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:layout_marginTop="@dimen/_8dp"
+          android:layout_marginBottom="@dimen/_8dp"
+          android:background="@android:color/darker_gray" />
+
+      <TableRow>
+
+        <TextView
+            style="@style/TextNormal"
+            android:text="@string/thanh_pho" />
+
+        <TextView
+            android:id="@+id/tvCity"
+            style="@style/TextNormal"
+            android:layout_marginStart="@dimen/_8dp"
+            android:textColor="@android:color/black"
+            tools:text="Ha noi" />
+      </TableRow>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:layout_marginTop="@dimen/_8dp"
+          android:layout_marginBottom="@dimen/_8dp"
+          android:background="@android:color/darker_gray" />
+
+      <TableRow>
+
+        <TextView
+            style="@style/TextNormal"
+            android:text="@string/quan_huyen" />
+
+        <TextView
+            android:id="@+id/tvDistrict"
+            style="@style/TextNormal"
+            android:layout_marginStart="@dimen/_8dp"
+            android:textColor="@android:color/black"
+            tools:text="Cau giay" />
+      </TableRow>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1px"
+          android:layout_marginTop="@dimen/_8dp"
+          android:layout_marginBottom="@dimen/_8dp"
+          android:background="@android:color/darker_gray" />
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnNextWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_32dp"
+        android:background="@drawable/bg_button_white"
+        android:backgroundTint="@null"
+        android:text="@string/register"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_16sp" />
+  </RelativeLayout>
+</LinearLayout>

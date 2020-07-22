@@ -1,0 +1,25 @@
+<resources>
+  <string name="app_name">Sapo test</string>
+  <string name="username">Username</string>
+  <string name="email">Email</string>
+  <string name="password">Password</string>
+  <string name="repeat_password">Repeat password</string>
+  <string name="next">Next</string>
+  <string name="city_desc">Bạn hãy chọn\nTỉnh/Thành nơi bạn ở</string>
+  <string name="district_desc">Bạn hãy chọn\nQuận/Huyện nơi bạn ở</string>
+  <string name="general_desc">Bạn hãy chọn\nĐộ tuổi và giới tính</string>
+  <string name="city">Thành Phố</string>
+  <string name="district">Quận Huyện</string>
+  <string name="general">Giới tính</string>
+  <string name="female">Nữ</string>
+  <string name="male">Nam</string>
+  <string name="other">Khác</string>
+  <string name="welcome">Chào mừng bạn\nđến với ứng dụng Sapo</string>
+  <string name="register">Đăng ký</string>
+  <string name="you_choose">Bạn đã chọn</string>
+  <string name="ten_dang_nhap">Tên đăng nhập</string>
+  <string name="sex">Giới tính</string>
+  <string name="age">Tuổi</string>
+  <string name="thanh_pho">Thành phố</string>
+  <string name="quan_huyen">Quận huyện</string>
+</resources>

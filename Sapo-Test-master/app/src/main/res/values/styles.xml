@@ -1,0 +1,46 @@
+<resources>
+
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:textColorPrimary">@android:color/black</item>
+  </style>
+
+  <style name="Toolbar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar">
+    <item name="android:minHeight">?attr/actionBarSize</item>
+    <item name="colorControlNormal">@android:color/white</item>
+    <item name="contentInsetStartWithNavigation">0dp</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:background">@android:color/white</item>
+  </style>
+
+  <style name="EdtStyle">
+    <item name="android:textColorHint">@color/clr_hint</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:paddingStart">16dp</item>
+    <item name="android:paddingEnd">16dp</item>
+    <item name="android:paddingTop">8dp</item>
+    <item name="android:paddingBottom">16dp</item>
+    <item name="android:lines">1</item>
+    <item name="android:layout_marginTop">16dp</item>
+    <item name="android:backgroundTint">@color/clr_hint</item>
+    <item name="android:inputType">text</item>
+  </style>
+
+  <style name="TextNormal">
+    <item name="android:textSize">14sp</item>
+  </style>
+
+  <style name="TextRadio" parent="TextNormal">
+    <item name="android:textColor">@android:color/white</item>
+    <item name="android:buttonTint">@android:color/black</item>
+  </style>
+
+  <style name="NumberPick" parent="AppTheme">
+    <item name="android:textColorPrimary">@android:color/white</item>
+  </style>
+</resources>

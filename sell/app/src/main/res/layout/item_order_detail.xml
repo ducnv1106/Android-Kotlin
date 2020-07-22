@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.ducnv1106.sell.model.Product" />
+    </data>
+
+    <ru.rambler.libs.swipe_layout.SwipeLayout
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/layout_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        app:left_swipe_enabled="false"
+        app:right_swipe_enabled="true"
+        app:swipe_enabled="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:loadImage="@{item.imageProduct}" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@id/image">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_name"
+                    style="@style/TextAppearance.Text.Regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{`Name : `+item.nameProduct}"
+                    android:textColor="@color/clr_tv_black"
+                    android:textSize="@dimen/_13sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_name_pirce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_name"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text="Price: "
+                    android:textColor="@color/clr_tv_black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_pirce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_name"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_toEndOf="@id/tv_name_pirce"
+                    android:text="@{item.priceProduct}"
+                    android:textColor="@color/clr_red"
+                    android:textSize="@dimen/_10sdp"
+                    tools:text="100000" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            app:bring_to_clamp="150dp"
+            app:clamp="self"
+            app:sticky="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/clr_red"
+            app:gravity="right" />
+    </ru.rambler.libs.swipe_layout.SwipeLayout>
+
+</layout>
